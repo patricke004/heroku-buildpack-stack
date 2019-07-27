@@ -25,7 +25,7 @@ if [ -d "$ENV_DIR" ]; then
   done
 fi
 
-WORK_DIR=/app
+WORK_DIR=/api/app
 cp -Rp "$BUILD_DIR/." "$WORK_DIR"
 mkdir -p "$WORK_DIR/vendor/bin"
 mkdir -p "$WORK_DIR/vendor/ghc-libs"
