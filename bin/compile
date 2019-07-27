@@ -97,8 +97,8 @@ if [ -f "$BUILD_DIR/Makefile" ]; then
     make
     make install
 else
-    api/vendor/bin/stack setup
-    api/vendor/bin/stack build --copy-bins --local-bin-path "$BUILD_DIR/app/.local/bin"
+    $BUILD_DIR/vendor/bin/stack setup
+    $BUILD_DIR/vendor/bin/stack build --copy-bins --local-bin-path "$BUILD_DIR/app/.local/bin"
 fi
 
 # Set context environment variables.
