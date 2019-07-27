@@ -45,7 +45,7 @@ function set-default-env (){
 export LANG=en_US.UTF-8
 export LIBRARY_PATH=$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib:$LIBRARY_PATH
 export LD_LIBRARY_PATH=$LIBRARY_PATH
-export PATH=\$PATH:\$BUILD_DIR/app/.local/bin:\$BUILD_DIR/vendor/bin
+echo "export PATH=\$PATH:\$BUILD_DIR/app/.local/bin:\$BUILD_DIR/vendor/bin"
 export STACK_ROOT=$CACHE_DIR/.stack
 
 ########## gmp #####################################################
