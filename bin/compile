@@ -42,10 +42,11 @@ function set-default-env (){
   echo "export $1=\${$1:-$2}" >> "$PROFILE_PATH"
 }
 
+PATH=$BUILD_DIR/app/.local/bin:$BUILD_DIR/vendor/bin:$PATH
 echo "export LANG=en_US.UTF-8"
 echo "export LIBRARY_PATH=$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib:$LIBRARY_PATH"
 echo "export LD_LIBRARY_PATH=$LIBRARY_PATH"
-echo "export PATH=$BUILD_DIR/app/.local/bin:$BUILD_DIR/vendor/bin:$PATH"
+echo "export PATH"
 echo "export STACK_ROOT=$CACHE_DIR/.stack"
 
 ########## gmp #####################################################
