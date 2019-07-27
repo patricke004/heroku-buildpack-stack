@@ -102,7 +102,7 @@ else
 fi
 
 # Set context environment variables.
-set-env PATH "app/.local/bin:$BUILD_DIR/vendor/bin:\$PATH"
+set-env PATH "/app/.local/bin:$BUILD_DIR/vendor/bin:\$PATH"
 set-default-env LIBRARY_PATH "$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib"
 set-default-env LD_LIBRARY_PATH "$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib"
 
