@@ -43,10 +43,10 @@ function set-default-env (){
 }
 
 echo "export LANG=en_US.UTF-8"
-echo "export LIBRARY_PATH=\$BUILD_DIR/vendor/ghc-libs:\$BUILD_DIR/vendor/lib:/usr/lib:\$LIBRARY_PATH"
-echo "export LD_LIBRARY_PATH=\$LIBRARY_PATH"
-echo "export PATH=\$BUILD_DIR/app/.local/bin:$BUILD_DIR/vendor/bin:/usr/local/bin:/usr/bin:/bin:\$PATH"
-echo "export STACK_ROOT=\$CACHE_DIR/.stack"
+echo "export LIBRARY_PATH=$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib:$LIBRARY_PATH"
+echo "export LD_LIBRARY_PATH=$LIBRARY_PATH"
+echo "export PATH=$BUILD_DIR/app/.local/bin:$BUILD_DIR/vendor/bin:$PATH"
+echo "export STACK_ROOT=$CACHE_DIR/.stack"
 
 ########## gmp #####################################################
 LIBGMP_VER=${LIBGMP_VER:-6.0.0a}
