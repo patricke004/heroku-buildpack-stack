@@ -106,12 +106,4 @@ set-env PATH "$BUILD_DIR/.local/bin:$BUILD_DIR/vendor/bin:\$PATH"
 set-default-env LIBRARY_PATH "$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib"
 set-default-env LD_LIBRARY_PATH "$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib"
 
-speak "Making stack binaries available"
-mkdir -p "$BUILD_DIR/.local"
-mv "$BUILD_DIR/.local/bin" "$BUILD_DIR/.local"
-
-speak "Caching .stack-work"
-rsync -avq "$BUILD_DIR/.stack-work/" "$SANDBOX_DIR"
-cp -Rp "$BUILD_DIR/.stack-work" "$BUILD_DIR"
-
 speak "Finished!"
