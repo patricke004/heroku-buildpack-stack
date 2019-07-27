@@ -98,11 +98,11 @@ if [ -f "$BUILD_DIR/Makefile" ]; then
     make install
 else
     stack setup
-    stack build --copy-bins
+    stack build --copy-bins --local-bin-path "$BUILD_DIR/app/.local/bin"
 fi
 
 # Set context environment variables.
-set-env PATH "/app/.local/bin:$BUILD_DIR/vendor/bin:\$PATH"
+set-env PATH "$BUILD_DIR/app/.local/bin:$BUILD_DIR/vendor/bin:\$PATH"
 set-default-env LIBRARY_PATH "$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib"
 set-default-env LD_LIBRARY_PATH "$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib"
 
