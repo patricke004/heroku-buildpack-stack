@@ -54,7 +54,7 @@ export LD_LIBRARY_PATH
 export PATH
 export STACK_ROOT
 
-echo $PATH | indent
+echo $PATH
 
 ########## gmp #####################################################
 LIBGMP_VER=${LIBGMP_VER:-6.0.0a}
