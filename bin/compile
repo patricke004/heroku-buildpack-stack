@@ -48,11 +48,13 @@ LIBRARY_PATH=$BUILD_DIR/vendor/ghc-libs:$BUILD_DIR/vendor/lib:/usr/lib:$LIBRARY_
 LD_LIBRARY_PATH=$LIBRARY_PATH
 STACK_ROOT=$CACHE_DIR/.stack
 
-echo "export LANG"
-echo "export LIBRARY_PATH"
-echo "export LD_LIBRARY_PATH"
-echo "export PATH"
-echo "export STACK_ROOT"
+export LANG
+export LIBRARY_PATH
+export LD_LIBRARY_PATH
+export PATH
+export STACK_ROOT
+
+echo $PATH | indent
 
 ########## gmp #####################################################
 LIBGMP_VER=${LIBGMP_VER:-6.0.0a}
